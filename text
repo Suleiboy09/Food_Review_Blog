@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-part">
+        <img src="logo-img.png" alt="logo image" class="logo-img" />
+        <p class="logo-name">Food Review Blog</p>
+      </div>
+      <nav class="nav">
+        <ul class="nav-holder">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Restaurant</a></li>
+          <li><a class="nav-link" href="#">Newsfeed</a></li>
+          <li><a class="nav-link" href="#">profile</a></li>
+          <li><a class="nav-link" href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="profile">
+        <p class="profile-hi">hi,</p>
+        <img
+          src="profile-image.jpg"
+          alt="profile image holder"
+          class="profile-img"
+        />
+      </section>
+      <section class="food-banner-section">
+        <div class="food-banner-container">
+          <div class="container">
+            <ion-icon
+              class="banner-iconl"
+              name="chevron-back-outline"
+            ></ion-icon>
+
+            <div class="food-banner"></div>
+
+            <ion-icon
+              class="banner-iconr"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  /* padding: 0 12.8rem; */
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-part {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-img {
+  width: 8rem;
+}
+.logo-name {
+  font-size: 1.6rem;
+  color: #e41414;
+  font-weight: 700;
+}
+
+.nav-holder {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  background-color: #ffa3a3;
+
+  border-radius: 2rem;
+  max-width: 40rem;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.4rem 3rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #603d3d;
+  font-size: 1.2rem;
+}
+
+.profile {
+  padding: 2.4rem 0;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.profile-hi {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.profile-img {
+  width: 4.4rem;
+  border: 1px solid #603d3d;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.food-banner-section {
+  display: flex;
+}
+
+.food-banner-container {
+  background: linear-gradient(to bottom, #fff, 20%, #ffa3a3);
+  margin: 0 auto;
+
+  border-radius: 4rem;
+}
+
+.container {
+  margin: 0 auto;
+
+  max-width: 64rem;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem;
+  gap: 3rem;
+}
+
+.food-banner {
+  width: 45rem;
+  border-radius: 120px;
+  overflow: hidden;
+  height: 22rem;
+
+  background-image: url(food-img0.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-iconl {
+  justify-self: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.banner-iconr {
+  justify-self: center;
+  width: 4rem;
+  height: 4rem;
+}
